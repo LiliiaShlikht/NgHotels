@@ -1,7 +1,7 @@
 <h1>Hot Weather Widget</h1>
 <div class="element">
-  <app-hotels-list></app-hotels-list>
-  <app-widgets-list></app-widgets-list>
+  <app-hotels-list (changeHotel)="onCardClick($event)"></app-hotels-list>
+  <app-widgets-list [hotel]="hotelWidget"></app-widgets-list>
   <div class="clear"> </div>
 </div>
 <div class="copy-right">

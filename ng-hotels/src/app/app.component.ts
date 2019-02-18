@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IHotels } from './hotels-list/hotels.interface';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ng-hotels';
+  public hotelWidget: IHotels;
+
+  public onCardClick(hotel: IHotels){
+    this.hotelWidget = hotel;
+  }
 }

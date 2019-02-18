@@ -28,7 +28,7 @@ export const HOTELS = [
       "temperature": 33
   },
   "social_info":{
-    "title": "Facebook",
+    "title": "Twitter",
       "img": "Montenegro-2.jpg",
       "followers": 770,
       "following": 10
@@ -46,7 +46,7 @@ export const HOTELS = [
       "temperature": 24
     },
     "social_info":{
-      "title": "Facebook",
+      "title": "Instagram",
       "img": "Prague-2.jpg",
       "followers": 150,
       "following": 109
@@ -64,7 +64,7 @@ export const HOTELS = [
       "temperature": 27
     },
     "social_info":{
-      "title": "Facebook",
+      "title": "Vkontakte",
       "img": "Paris-2.jpg",
       "followers": 1002,
       "following": 88
@@ -90,3 +90,10 @@ export const HOTELS = [
     "type": "*****"
   }
 ];
+
+export const FILTERS = [
+  "All",
+  "***",
+  "****",
+  "*****"
+]
