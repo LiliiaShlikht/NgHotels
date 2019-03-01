@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { IHotels } from './hotels.interface';
-import { HOTELS, FILTERS } from './hotels';
+import { HOTELS$, FILTERS$ } from './hotels';
 
 @Component({
   selector: 'app-hotels-list',
@@ -22,11 +22,18 @@ export class HotelsListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.dataHotels = HOTELS;
-    this.selectedHotel = HOTELS[0];
-    this.emitData();
-    this.filterTypes = FILTERS;
-    this.filter = this.filterTypes[0];
+    // this.dataHotels = HOTELS$;
+    // this.selectedHotel = HOTELS[0];
+    HOTELS$.subscribe((data) => {
+      this.dataHotels = data;
+      this.selectedHotel = data[0];
+      this.emitData();
+    })
+
+    FILTERS$.subscribe((data) => {
+      this.filterTypes = data;
+      this.filter = this.filterTypes[0];
+    })
   }
 
   private emitData(){

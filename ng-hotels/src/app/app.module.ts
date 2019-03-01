@@ -6,6 +6,7 @@ import { HotelsListComponent } from './hotels-list/hotels-list.component';
 import { WidgetsListComponent } from './widgets-list/widgets-list.component';
 import { HotelCardComponent } from './hotels-list/hotel-card/hotel-card.component';
 import { HotelsFilterPipe } from './hotels-filter.pipe';
+import { PhoneNumberPipe } from './phone-number.pipe';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { HotelsFilterPipe } from './hotels-filter.pipe';
     HotelsListComponent,
     WidgetsListComponent,
     HotelCardComponent,
-    HotelsFilterPipe
+    HotelsFilterPipe,
+    PhoneNumberPipe
   ],
   imports: [
     BrowserModule

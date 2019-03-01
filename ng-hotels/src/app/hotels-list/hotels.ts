@@ -1,8 +1,10 @@
-export const HOTELS = [
+import { Observable, of } from "rxjs";
+
+const HOTELS = [
   {
     "img": "..",
     "address": "Boston",
-    "phone":  555501,   // дополнительно задание pipe для форматирования
+    "phone":  555501,
     "weather": {
       "title": "Weather",
       "icon": "Boston-1.jpg",
@@ -91,9 +93,14 @@ export const HOTELS = [
   }
 ];
 
-export const FILTERS = [
+const FILTERS = [
   "All",
   "***",
   "****",
   "*****"
 ]
+
+export const HOTELS$ = of(HOTELS);
+export const FILTERS$ = of(FILTERS);
+
+
